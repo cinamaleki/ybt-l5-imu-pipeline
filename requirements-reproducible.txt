@@ -1,0 +1,9 @@
+# Exact direct versions used locally with Python 3.12.14.
+# Transitive dependencies and operating-system libraries are not fully locked.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+scikit-learn==1.8.0
+matplotlib==3.10.8
+reportlab==4.4.9
+openpyxl==3.1.5

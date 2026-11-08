@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this software when using the workflow. This is exploratory research software."
+type: software
+title: "YBT-L5 IMU Pipeline"
+authors:
+  - family-names: "Maleki"
+    given-names: "Sina"
+version: 0.1.0
+date-released: 2026-11-04
+license: MIT
+abstract: "Reproducible exploratory analysis of lumbar-IMU Y-Balance recordings, with signal quality checks, explicit recovery provenance, and participant-held-out evaluation. Includes an entirely synthetic demonstration."
+keywords:
+  - inertial measurement unit
+  - Y-Balance Test
+  - motor control
+  - participant-held-out validation
+repository-code: "https://github.com/cinamaleki/ybt-l5-imu-pipeline"
+url: "https://github.com/cinamaleki/ybt-l5-imu-pipeline"
