@@ -2,7 +2,7 @@
 
 Exploratory research software for lumbar (L5) IMU recordings collected during the Y-Balance Test. The focus is transparent signal processing, explicit provenance of uncertain movement boundaries, and evaluation with whole participants held out.
 
-**Status:** research prototype, software v0.1.0. Seven IMU participants; no external validation. This is not a clinical decision tool. The public repository contains code, aggregate pilot findings, and a synthetic demonstration. Participant-level recordings, scores, predictions, and real-data viewers are excluded.
+**Status:** research prototype, software v0.2.0. Seven IMU participants; no external validation. This is not a clinical decision tool. The public repository contains code, aggregate pilot findings, and a synthetic demonstration. Participant-level recordings, scores, predictions, and real-data viewers are excluded.
 
 [راهنمای فارسی](README.fa.md) · [Methods](docs/METHODS.md) · [Model card](docs/MODEL_CARD.md) · [Data availability](docs/DATA_AVAILABILITY.md) · [GitHub setup](docs/GITHUB_SETUP.md)
 
@@ -31,6 +31,18 @@ For the exact direct dependency versions used locally:
 python -m pip install -r requirements-reproducible.txt
 python -m pip install --no-deps .
 ```
+
+## Feature variation and robustness audit
+
+Version 0.2 adds a separate descriptive audit of repeated executions, eight fixed boundary perturbations, filter sensitivity and signal-detector boundaries. It does not retune the previous models or establish clinical reliability. [Methods and limits](docs/FEATURE_AUDIT.md).
+
+```bash
+ybt-l5 robustness-demo --analysis-dir demo_output --output-dir output/robustness_demo
+# Authorized private analysis, after the normal study workflow:
+ybt-l5 robustness --input-dir private_data --analysis-dir output/pilot --output-dir output/feature_audit
+```
+
+The generated standalone `YBT_Feature_Audit_FA.html` explains results in Persian. Gyro/acceleration descriptors are compared across all three audit questions; filter comparisons for unfiltered vendor orientation and duration are marked not applicable. Rankings are exploratory and sample-dependent. Generated human-data reports and tables remain private.
 
 ## Authorized private-data analysis
 
@@ -76,6 +88,7 @@ Protocol labels assume the cycle `R ANT, L ANT, R PM, L PM, R PL, L PL`, repeate
 | `ybt_complete_pipeline.py` | Segmentation, recovery hypotheses, and held-out validation |
 | `ybt_complete_analysis.py` | Features, grouped models, and mixed ANOVA |
 | `build_complete_deliverables.py` | Private offline viewer and report generation |
+| `ybt_feature_audit.py`, `ybt_feature_report.py` | Repeat/processing audit and private standalone explanation |
 | `tests/` | Numerical, provenance, input-validation, and integration contracts |
 | `.github/workflows/ci.yml` | Installation, unit tests, synthetic smoke run, and public-tree checks |
 

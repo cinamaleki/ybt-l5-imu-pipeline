@@ -17,4 +17,5 @@ jobs:
       - run: python -m pip install .
       - run: python -m unittest discover -s tests -v
       - run: ybt-l5 demo --output-dir demo_output
+      - run: ybt-l5 robustness-demo --analysis-dir demo_output --output-dir output/robustness_demo
       - run: python tools/check_public_tree.py

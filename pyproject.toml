@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ybt-l5-imu-pipeline"
-version = "0.1.0"
+version = "0.2.0"
 description = "Exploratory lumbar-IMU Y-Balance pipeline with explicit boundary provenance and participant-held-out evaluation"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -16,4 +16,4 @@ dependencies = ["numpy>=1.26,<3", "pandas>=2.2,<3", "scipy>=1.12,<2", "scikit-le
 ybt-l5 = "ybt_l5_cli:main"
 
 [tool.setuptools]
-py-modules = ["ybt_l5_cli", "ybt_synthetic", "run_complete_ybt", "ybt_complete_pipeline", "ybt_complete_analysis", "ybt_imu_audit", "build_complete_deliverables"]
+py-modules = ["ybt_feature_audit", "ybt_feature_report", "ybt_l5_cli", "ybt_synthetic", "run_complete_ybt", "ybt_complete_pipeline", "ybt_complete_analysis", "ybt_imu_audit", "build_complete_deliverables"]

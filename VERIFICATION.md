@@ -20,3 +20,12 @@ Installation used existing dependencies and `--no-deps --no-build-isolation` in 
 ## Repository preparation — 8 November 2026
 
 Recovered the original 32-file source ZIP, verified its SHA-256 and every file listed in its source manifest, and confirmed write access to the owner-created private repository. Repository URLs were added to citation metadata; setup instructions now describe the existing repository. No participant inputs were needed for this step. Current local checks are repeated before the source commit.
+
+## Feature audit extension — 11 November 2026
+
+- Recovered the private complete analysis and all seven source archives through authorized access. Recomputed original features matched all existing descriptor values at rtol=atol=1e-9.
+- Processed 198 observed trials (66 complete three-repeat cells), plus separate proposal-inclusive repeats. All eight fixed boundary scenarios were valid in this pilot; filter and one-to-one detector comparisons completed.
+- All 24 local unit tests passed. New contracts cover physical perturbation bounds, no clipping/overlap, fixed observed-only scaling, three-repeat pair differences, keyed signed-feature comparisons, overlap-based detector assignment, and non-applicability of filtering vendor orientation.
+- Source distribution builds successfully. Installed CLI synthetic analysis and the new feature audit both completed, with their outputs explicitly labelled entirely synthetic. Hosted Python 3.11/3.12 checks include both demonstrations; consult Actions for the current run status.
+- Independent checks of three real repeat cells and two processing summaries matched the exported calculations. All seven source-archive hashes matched the earlier private audit. The standalone HTML contains three embedded figures and two result tables; figure layout was visually checked. An actual browser rendering was not verified.
+- Findings remain descriptive same-pilot outputs. No participant-level table, trace, report or trained model was added to GitHub.
